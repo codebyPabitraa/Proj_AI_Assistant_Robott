@@ -1,0 +1,29 @@
+# Application settings
+app_name: AI-Assistant-Robot
+debug: true
+# ==========================================
+# AI Assistant Robot - General Settings
+# ==========================================
+
+app:
+  name: "AI Assistant Robot"
+  version: "1.0.0"
+  debug: true
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+
+robot:
+  wake_word: "jarvis"
+  language: "en"
+
+logging:
+  level: "INFO"
+
+database:
+  sqlite_path: "backend/data/sqlite/assistant.db"
+
+storage:
+  meetings: "backend/data/meeting_records"
+  logs: "backend/data/logs"

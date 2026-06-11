@@ -1,0 +1,173 @@
+2026-06-09 16:47:17,741 | INFO | AIAssistantRobot | Robot Started Successfully
+2026-06-09 16:47:17,741 | WARNING | AIAssistantRobot | This is a warning
+2026-06-09 16:47:17,742 | ERROR | AIAssistantRobot | This is an error
+2026-06-09 16:49:03,403 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-09 16:49:03,404 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-09 16:49:03,404 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-09 16:49:03,405 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:11:38,692 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:11:38,695 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:11:38,696 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:11:38,696 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:12:05,859 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:12:05,859 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:12:05,859 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:12:05,860 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:14:43,183 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:14:43,205 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:14:43,206 | INFO | sqlalchemy.engine.Engine | [generated in 0.00240s] {'name': 'Pabitra Chakraborty', 'email': 'pabitra@example.com'}
+2026-06-10 12:14:43,303 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 12:14:43,318 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:14:43,329 | INFO | sqlalchemy.engine.Engine | SELECT users.id, users.name, users.email 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-06-10 12:14:43,330 | INFO | sqlalchemy.engine.Engine | [generated in 0.00146s] {'pk_1': 1}
+2026-06-10 12:14:43,364 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:14:45,404 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:14:45,405 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:14:45,406 | INFO | sqlalchemy.engine.Engine | [cached since 2.202s ago] {'name': 'Pabitra Chakraborty', 'email': 'pabitra@example.com'}
+2026-06-10 12:14:45,425 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:15:06,150 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:15:06,152 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:15:06,153 | INFO | sqlalchemy.engine.Engine | [generated in 0.00058s] {}
+2026-06-10 12:15:06,159 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:15:07,671 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:15:07,672 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:15:07,672 | INFO | sqlalchemy.engine.Engine | [cached since 1.521s ago] {}
+2026-06-10 12:15:07,677 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:15:53,265 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:15:53,267 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:15:53,269 | INFO | sqlalchemy.engine.Engine | [cached since 70.06s ago] {'name': 'Pabitra Chakraborty', 'email': 'pabitra@example.com'}
+2026-06-10 12:15:53,274 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:16:04,044 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:16:04,045 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:16:04,045 | INFO | sqlalchemy.engine.Engine | [cached since 57.89s ago] {}
+2026-06-10 12:16:04,049 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:19:10,520 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:19:10,520 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:19:10,521 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:19:10,521 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:19:53,440 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:19:53,443 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:19:53,444 | INFO | sqlalchemy.engine.Engine | [generated in 0.00072s] {}
+2026-06-10 12:19:53,465 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:19:54,773 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:19:54,775 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:19:54,775 | INFO | sqlalchemy.engine.Engine | [cached since 1.332s ago] {}
+2026-06-10 12:19:54,780 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:21:54,702 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:21:54,824 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:21:54,827 | INFO | sqlalchemy.engine.Engine | [generated in 0.00711s] {'name': 'Pabitra', 'email': 'pabitra@example.com'}
+2026-06-10 12:21:54,894 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:36:04,535 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:36:04,539 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:36:04,540 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:36:04,541 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:36:07,556 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:36:07,557 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:36:07,557 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:36:07,558 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:37:13,130 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:37:13,135 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:37:13,136 | INFO | sqlalchemy.engine.Engine | [generated in 0.00138s] {'name': 'Pabitra', 'email': 'pabitra1@example.com'}
+2026-06-10 12:37:13,159 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 12:37:13,164 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:37:13,169 | INFO | sqlalchemy.engine.Engine | SELECT users.id, users.name, users.email 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-06-10 12:37:13,171 | INFO | sqlalchemy.engine.Engine | [generated in 0.00126s] {'pk_1': 5}
+2026-06-10 12:37:13,180 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:37:17,476 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:37:17,477 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:37:17,477 | INFO | sqlalchemy.engine.Engine | [cached since 4.343s ago] {'name': 'Pabitra', 'email': 'pabitra1@example.com'}
+2026-06-10 12:37:17,490 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:37:24,517 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 12:37:24,518 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 12:37:24,519 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 12:37:24,519 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 12:38:37,181 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:38:37,189 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email) VALUES (%(name)s, %(email)s) RETURNING users.id
+2026-06-10 12:38:37,190 | INFO | sqlalchemy.engine.Engine | [generated in 0.00130s] {'name': 'Pabitra', 'email': 'pabitra_new@example.com'}
+2026-06-10 12:38:37,207 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 12:38:37,212 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:38:37,220 | INFO | sqlalchemy.engine.Engine | SELECT users.id, users.name, users.email 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-06-10 12:38:37,221 | INFO | sqlalchemy.engine.Engine | [generated in 0.00136s] {'pk_1': 7}
+2026-06-10 12:38:37,239 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:39:01,470 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:39:01,472 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:39:01,473 | INFO | sqlalchemy.engine.Engine | [generated in 0.00109s] {}
+2026-06-10 12:39:01,481 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 12:39:02,930 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 12:39:02,931 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 12:39:02,932 | INFO | sqlalchemy.engine.Engine | [cached since 1.459s ago] {}
+2026-06-10 12:39:02,936 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:17:23,309 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 15:17:23,313 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 15:17:23,314 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 15:17:23,315 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 15:18:11,410 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 15:18:11,411 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 15:18:11,411 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 15:18:11,412 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 15:18:31,244 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:18:31,246 | INFO | sqlalchemy.engine.Engine | INSERT INTO conversations (user_id) VALUES (%(user_id)s) RETURNING conversations.id, conversations.created_at
+2026-06-10 15:18:31,248 | INFO | sqlalchemy.engine.Engine | [generated in 0.00098s] {'user_id': 1}
+2026-06-10 15:18:31,301 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:21:08,634 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:21:08,660 | INFO | sqlalchemy.engine.Engine | INSERT INTO conversations (user_id) VALUES (%(user_id)s) RETURNING conversations.id, conversations.created_at
+2026-06-10 15:21:08,662 | INFO | sqlalchemy.engine.Engine | [cached since 157.4s ago] {'user_id': 5}
+2026-06-10 15:21:08,704 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 15:21:08,726 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:21:08,759 | INFO | sqlalchemy.engine.Engine | SELECT conversations.id, conversations.user_id, conversations.created_at 
+FROM conversations 
+WHERE conversations.id = %(pk_1)s
+2026-06-10 15:21:08,761 | INFO | sqlalchemy.engine.Engine | [generated in 0.00167s] {'pk_1': 2}
+2026-06-10 15:21:08,796 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:21:20,977 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-10 15:21:20,978 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-10 15:21:20,979 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-10 15:21:20,980 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-10 15:22:08,418 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:22:08,423 | INFO | sqlalchemy.engine.Engine | INSERT INTO messages (conversation_id, role, content) VALUES (%(conversation_id)s, %(role)s, %(content)s) RETURNING messages.id, messages.created_at
+2026-06-10 15:22:08,424 | INFO | sqlalchemy.engine.Engine | [generated in 0.00112s] {'conversation_id': 2, 'role': 'user', 'content': 'Hello Robot!'}
+2026-06-10 15:22:08,456 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 15:22:08,460 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:22:08,465 | INFO | sqlalchemy.engine.Engine | SELECT messages.id, messages.conversation_id, messages.role, messages.content, messages.created_at 
+FROM messages 
+WHERE messages.id = %(pk_1)s
+2026-06-10 15:22:08,467 | INFO | sqlalchemy.engine.Engine | [generated in 0.00171s] {'pk_1': 1}
+2026-06-10 15:22:08,474 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:22:10,976 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:22:10,977 | INFO | sqlalchemy.engine.Engine | INSERT INTO messages (conversation_id, role, content) VALUES (%(conversation_id)s, %(role)s, %(content)s) RETURNING messages.id, messages.created_at
+2026-06-10 15:22:10,977 | INFO | sqlalchemy.engine.Engine | [cached since 2.555s ago] {'conversation_id': 2, 'role': 'user', 'content': 'Hello Robot!'}
+2026-06-10 15:22:10,981 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-10 15:22:10,983 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:22:10,984 | INFO | sqlalchemy.engine.Engine | SELECT messages.id, messages.conversation_id, messages.role, messages.content, messages.created_at 
+FROM messages 
+WHERE messages.id = %(pk_1)s
+2026-06-10 15:22:10,985 | INFO | sqlalchemy.engine.Engine | [cached since 2.52s ago] {'pk_1': 2}
+2026-06-10 15:22:10,989 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:23:03,029 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:23:03,031 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email 
+FROM users
+2026-06-10 15:23:03,032 | INFO | sqlalchemy.engine.Engine | [generated in 0.00061s] {}
+2026-06-10 15:23:03,055 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-10 15:24:20,195 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-10 15:24:20,197 | INFO | sqlalchemy.engine.Engine | SELECT messages.id AS messages_id, messages.conversation_id AS messages_conversation_id, messages.role AS messages_role, messages.content AS messages_content, messages.created_at AS messages_created_at 
+FROM messages 
+WHERE messages.conversation_id = %(conversation_id_1)s
+2026-06-10 15:24:20,198 | INFO | sqlalchemy.engine.Engine | [generated in 0.00059s] {'conversation_id_1': 2}
+2026-06-10 15:24:20,200 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-11 11:03:40,805 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-11 11:03:40,816 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-11 11:03:40,816 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-11 11:03:40,817 | INFO | AIAssistantRobot | Robot is ready.
