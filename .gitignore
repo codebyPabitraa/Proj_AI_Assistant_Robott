@@ -9,8 +9,10 @@ venv/
 __pycache__/
 *.py[cod]
 
-# VS Code
+# IDE
 .vscode/
-
-# PyCharm
 .idea/
+
+# OS files
+.DS_Store
+Thumbs.db
