@@ -1,9 +1,11 @@
 from fastapi import FastAPI
-
 from backend.api.routes.users import router as user_router
 from backend.api.routes.conversations import router as conversation_router
-
+from backend.api.routes import rag
+from backend.api.routes import memory
+from backend.api.routes import auth
 from backend.modules.core.robot_brain import RobotBrain
+from backend.api.routes import voice
 
 app = FastAPI(
     title="AI Assistant Robot",
@@ -18,7 +20,10 @@ brain.startup()
 # Include API Routes
 app.include_router(user_router)
 app.include_router(conversation_router)
-
+app.include_router(rag.router, prefix="/rag", tags=["RAG"])
+app.include_router(memory.router, prefix="/memory", tags=["Memory"])
+app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(voice.router, prefix="/voice", tags=["Voice"])
 
 @app.get("/")
 async def root():
@@ -27,13 +32,11 @@ async def root():
         "version": "1.0.0",
     }
 
-
 @app.get("/health")
 async def health():
     return {
         "status": "healthy",
     }
-
 
 @app.get("/status")
 async def status():

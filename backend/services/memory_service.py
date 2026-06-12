@@ -1,46 +1,59 @@
-# Memory CRUD service
 from sqlalchemy.orm import Session
-
-from backend.repositories.conversation_repository import (
-    ConversationRepository,
-)
-from backend.repositories.message_repository import (
-    MessageRepository,
-)
+from backend.models.message import Message
+from backend.repositories.message_repository import MessageRepository
 
 
 class MemoryService:
 
     @staticmethod
-    def create_conversation(
-        db: Session,
-        user_id: int,
-    ):
-        return ConversationRepository.create(
-            db=db,
-            user_id=user_id,
-        )
+    def save_message(db: Session, conversation_id: int, role: str, content: str) -> Message:
+        """
+        Saves a single message to PostgreSQL.
 
-    @staticmethod
-    def add_message(
-        db: Session,
-        conversation_id: int,
-        role: str,
-        content: str,
-    ):
-        return MessageRepository.create(
-            db=db,
+        role: "user" or "assistant"
+        content: actual message text
+        """
+        message = Message(
             conversation_id=conversation_id,
             role=role,
-            content=content,
+            content=content
         )
+        return MessageRepository.create(db, message)
 
     @staticmethod
-    def get_conversation_history(
-        db: Session,
-        conversation_id: int,
-    ):
-        return MessageRepository.get_by_conversation(
+    def get_history(db: Session, conversation_id: int, limit: int = 10) -> list[dict]:
+        """
+        Fetches last N messages of a conversation.
+        Returns list of dicts with role and content.
+
+        limit: how many recent messages to fetch (default 10)
+        """
+        messages = MessageRepository.get_by_conversation(
             db=db,
             conversation_id=conversation_id,
+            limit=limit
         )
+
+        # Convert to list of dicts for easy use
+        return [
+            {
+                "role": message.role,
+                "content": message.content
+            }
+            for message in messages
+        ]
+
+    @staticmethod
+    def clear_history(db: Session, conversation_id: int) -> dict:
+        """
+        Deletes all messages of a conversation.
+        """
+        deleted_count = MessageRepository.delete_by_conversation(
+            db=db,
+            conversation_id=conversation_id
+        )
+
+        return {
+            "status": "success",
+            "deleted_messages": deleted_count
+        }

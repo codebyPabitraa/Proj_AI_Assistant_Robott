@@ -171,3 +171,217 @@ WHERE messages.conversation_id = %(conversation_id_1)s
 2026-06-11 11:03:40,816 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
 2026-06-11 11:03:40,816 | INFO | AIAssistantRobot | Robot startup sequence initiated.
 2026-06-11 11:03:40,817 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:35:35,814 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:35:35,817 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:35:35,818 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:35:35,819 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:41:49,416 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:41:49,417 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:41:49,418 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:41:49,419 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:50:09,399 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:50:09,401 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:50:09,401 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:50:09,402 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:56:07,953 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:56:07,955 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:56:07,955 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:56:07,956 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:59:00,176 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:59:00,180 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:59:00,181 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:59:00,181 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 10:59:35,261 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 10:59:35,262 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 10:59:35,262 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 10:59:35,262 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 11:02:42,362 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 11:02:42,363 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 11:02:42,363 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 11:02:42,363 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 11:06:17,421 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 11:06:17,440 | INFO | sqlalchemy.engine.Engine | INSERT INTO messages (conversation_id, role, content) VALUES (%(conversation_id)s, %(role)s, %(content)s) RETURNING messages.id, messages.created_at
+2026-06-12 11:06:17,441 | INFO | sqlalchemy.engine.Engine | [generated in 0.00328s] {'conversation_id': 1, 'role': 'user', 'content': 'My name is Pabitra'}
+2026-06-12 11:06:17,563 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 11:06:45,840 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 11:06:45,842 | INFO | sqlalchemy.engine.Engine | INSERT INTO messages (conversation_id, role, content) VALUES (%(conversation_id)s, %(role)s, %(content)s) RETURNING messages.id, messages.created_at
+2026-06-12 11:06:45,842 | INFO | sqlalchemy.engine.Engine | [cached since 28.41s ago] {'conversation_id': 2, 'role': 'user', 'content': 'My name is Pabitra'}
+2026-06-12 11:06:45,859 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-12 11:06:45,871 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 11:06:45,879 | INFO | sqlalchemy.engine.Engine | SELECT messages.id, messages.conversation_id, messages.role, messages.content, messages.created_at 
+FROM messages 
+WHERE messages.id = %(pk_1)s
+2026-06-12 11:06:45,879 | INFO | sqlalchemy.engine.Engine | [generated in 0.00094s] {'pk_1': 4}
+2026-06-12 11:06:45,889 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 11:07:00,380 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 11:07:00,387 | INFO | sqlalchemy.engine.Engine | SELECT messages.id AS messages_id, messages.conversation_id AS messages_conversation_id, messages.role AS messages_role, messages.content AS messages_content, messages.created_at AS messages_created_at 
+FROM messages 
+WHERE messages.conversation_id = %(conversation_id_1)s ORDER BY messages.created_at ASC 
+ LIMIT %(param_1)s
+2026-06-12 11:07:00,387 | INFO | sqlalchemy.engine.Engine | [generated in 0.00077s] {'conversation_id_1': 2, 'param_1': 10}
+2026-06-12 11:07:00,407 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 13:12:11,888 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 13:12:11,890 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 13:12:11,890 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 13:12:11,890 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 14:14:20,115 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:14:20,160 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:14:20,162 | INFO | sqlalchemy.engine.Engine | [generated in 0.01102s] {'email_1': ' pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:14:20,245 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:14:53,629 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:14:53,630 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:14:53,632 | INFO | sqlalchemy.engine.Engine | [cached since 33.48s ago] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:14:53,758 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-12 14:14:53,913 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:14:56,756 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:14:56,758 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:14:56,759 | INFO | sqlalchemy.engine.Engine | [cached since 36.61s ago] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:14:56,762 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-12 14:14:56,777 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:20:07,067 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 14:20:07,068 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 14:20:07,068 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 14:20:07,068 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 14:20:53,330 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:20:53,337 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:20:53,338 | INFO | sqlalchemy.engine.Engine | [generated in 0.00103s] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:20:53,387 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-12 14:20:53,404 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:21:37,798 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:21:37,799 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:21:37,800 | INFO | sqlalchemy.engine.Engine | [cached since 44.46s ago] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:21:37,803 | WARNING | passlib.handlers.bcrypt | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-12 14:21:37,818 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:22:42,320 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 14:22:42,321 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 14:22:42,321 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 14:22:42,321 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 14:23:15,053 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:23:15,058 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:23:15,060 | INFO | sqlalchemy.engine.Engine | [generated in 0.00206s] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:23:15,618 | INFO | sqlalchemy.engine.Engine | INSERT INTO users (name, email, hashed_password) VALUES (%(name)s, %(email)s, %(hashed_password)s) RETURNING users.id
+2026-06-12 14:23:15,618 | INFO | sqlalchemy.engine.Engine | [generated in 0.00104s] {'name': 'Pabitra', 'email': 'pabitra@gmail.com', 'hashed_password': '$2b$12$.u6CC1KKzfyEaNO0NvE5HOXXWTiFYbixv/JQTdwwfahujMPD1irKS'}
+2026-06-12 14:23:15,636 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-12 14:23:15,642 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:23:15,645 | INFO | sqlalchemy.engine.Engine | SELECT users.id, users.name, users.email, users.hashed_password 
+FROM users 
+WHERE users.id = %(pk_1)s
+2026-06-12 14:23:15,645 | INFO | sqlalchemy.engine.Engine | [generated in 0.00074s] {'pk_1': 8}
+2026-06-12 14:23:15,650 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:24:06,116 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:24:06,118 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:24:06,118 | INFO | sqlalchemy.engine.Engine | [cached since 51.06s ago] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:24:06,642 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:25:57,433 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:25:57,434 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:25:57,435 | INFO | sqlalchemy.engine.Engine | [cached since 162.4s ago] {'email_1': 'pabitra@gmail.com', 'param_1': 1}
+2026-06-12 14:25:57,887 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 14:26:57,504 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 14:26:57,551 | INFO | sqlalchemy.engine.Engine | SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.hashed_password AS users_hashed_password 
+FROM users 
+WHERE users.id = %(id_1)s 
+ LIMIT %(param_1)s
+2026-06-12 14:26:57,551 | INFO | sqlalchemy.engine.Engine | [generated in 0.00389s] {'id_1': 8, 'param_1': 1}
+2026-06-12 14:26:57,564 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 15:22:36,799 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:22:36,801 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:22:36,801 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:22:36,802 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:25:23,028 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:25:23,030 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:25:23,030 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:25:23,031 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:30:24,015 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:30:24,016 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:30:24,016 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:30:24,016 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:43:11,647 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:43:11,648 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:43:11,648 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:43:11,649 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:45:43,610 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:45:43,612 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:45:43,612 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:45:43,612 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:48:36,414 | WARNING | huggingface_hub.file_download | Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-06-12 15:49:27,100 | INFO | comtypes.client._code_cache | Could not import comtypes.gen, trying to create it.
+2026-06-12 15:49:27,101 | INFO | comtypes.client._code_cache | Created comtypes.gen directory: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-06-12 15:49:27,102 | INFO | comtypes.client._code_cache | Writing __init__.py file: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen\__init__.py'
+2026-06-12 15:49:27,144 | INFO | comtypes.client._code_cache | Using writeable comtypes cache directory: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-06-12 15:49:27,182 | INFO | comtypes.client._generate | Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+2026-06-12 15:49:27,190 | INFO | comtypes.client._generate | # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+2026-06-12 15:49:27,332 | INFO | comtypes.client._generate | # Generating comtypes.gen.SpeechLib
+2026-06-12 15:49:27,343 | INFO | comtypes.client._generate | Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+2026-06-12 15:49:27,344 | INFO | comtypes.client._generate | # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+2026-06-12 15:49:27,355 | INFO | comtypes.client._generate | # Generating comtypes.gen.stdole
+2026-06-12 15:49:28,768 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:49:28,769 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:49:28,769 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:49:28,770 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:58:17,149 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 15:58:17,150 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 15:58:17,151 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 15:58:17,151 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 15:59:11,165 | INFO | comtypes.client._code_cache | Imported existing <module 'comtypes.gen' from 'C:\\Users\\chakr\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-06-12 15:59:11,166 | INFO | comtypes.client._code_cache | Using writeable comtypes cache directory: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-06-12 16:00:09,305 | INFO | faster_whisper | Processing audio with duration 00:05.000
+2026-06-12 16:00:13,600 | INFO | faster_whisper | Detected language 'nn' with probability 0.61
+2026-06-12 16:01:02,064 | INFO | faster_whisper | Processing audio with duration 00:05.000
+2026-06-12 16:01:33,884 | INFO | faster_whisper | Detected language 'en' with probability 0.36
+2026-06-12 16:03:18,996 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 16:03:18,997 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 16:03:18,998 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 16:03:18,998 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 16:03:56,245 | INFO | faster_whisper | Processing audio with duration 00:05.000
+2026-06-12 16:07:58,109 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 16:07:58,110 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 16:07:58,110 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 16:07:58,111 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 16:08:41,404 | INFO | faster_whisper | Processing audio with duration 00:05.000
+2026-06-12 16:10:07,209 | INFO | faster_whisper | Processing audio with duration 00:05.000
+2026-06-12 16:10:17,046 | INFO | comtypes.client._code_cache | Imported existing <module 'comtypes.gen' from 'C:\\Users\\chakr\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+2026-06-12 16:10:17,063 | INFO | comtypes.client._code_cache | Using writeable comtypes cache directory: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
