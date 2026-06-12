@@ -1,5 +1,7 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
+from backend.database.session import get_db
 from backend.services.rag_service import RAGService
 import uuid
 
@@ -7,13 +9,17 @@ router = APIRouter()
 
 
 @router.post("/upload")
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db)
+):
     file_bytes = await file.read()
     doc_id = str(uuid.uuid4())
     result = RAGService.upload_file(
         file_bytes=file_bytes,
         filename=file.filename,
-        doc_id=doc_id
+        doc_id=doc_id,
+        db=db
     )
     return result
 
@@ -53,3 +59,22 @@ def query_knowledge_base(request: QueryRequest):
         "question": request.question,
         "results": results
     }
+
+
+@router.get("/documents")
+def get_documents(db: Session = Depends(get_db)):
+    from backend.repositories.document_repository import DocumentRepository
+    documents = DocumentRepository.get_all(db)
+    return {"documents": [
+        {
+            "id": d.id,
+            "filename": d.filename,
+            "file_type": d.file_type,
+            "word_count": d.word_count,
+            "chunk_count": d.chunk_count,
+            "collection": d.collection_name,
+            "status": d.status,
+            "created_at": str(d.created_at)
+        }
+        for d in documents
+    ]}

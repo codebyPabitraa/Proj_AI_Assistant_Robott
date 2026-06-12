@@ -1,28 +1,50 @@
+from sqlalchemy.orm import Session
 from backend.modules.memory.ingestion.file_type_detector import FileTypeDetector
 from backend.modules.memory.ingestion.content_extractor import ContentExtractor
 from backend.modules.memory.ingestion.decision_engine import DecisionEngine
 from backend.modules.memory.ingestion.adaptive_chunker import AdaptiveChunker
 from backend.modules.rag.embedder import Embedder
 from backend.modules.rag.vector_store import VectorStore
+from backend.repositories.document_repository import DocumentRepository
+from backend.models.document import Document
 
 
 class RAGService:
 
     @staticmethod
-    def upload_file(file_bytes: bytes, filename: str, doc_id: str) -> dict:
+    def upload_file(file_bytes: bytes, filename: str, doc_id: str, db: Session = None, user_id: int = None) -> dict:
         file_type = FileTypeDetector.detect(filename)
         text = ContentExtractor.extract(file_bytes, file_type)
+
         if not text:
             return {"status": "error", "message": "No text could be extracted"}
+
         decision = DecisionEngine.decide(text, file_type)
         chunks = AdaptiveChunker.chunk(text, decision["chunking_strategy"])
         embeddings = Embedder.embed_texts(chunks)
+
         VectorStore.store_chunks(
             collection_name=decision["collection"],
             chunks=chunks,
             embeddings=embeddings,
             doc_id=doc_id
         )
+
+        # Save record to PostgreSQL if db is provided
+        if db:
+            document = Document(
+                user_id=user_id,
+                filename=filename,
+                file_type=file_type,
+                file_size=len(file_bytes),
+                word_count=decision["word_count"],
+                chunk_count=len(chunks),
+                collection_name=decision["collection"],
+                doc_id=doc_id,
+                status="success"
+            )
+            DocumentRepository.create(db, document)
+
         return {
             "status": "success",
             "doc_id": doc_id,

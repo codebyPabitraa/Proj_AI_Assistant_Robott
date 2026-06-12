@@ -385,3 +385,22 @@ WHERE users.id = %(id_1)s
 2026-06-12 16:10:07,209 | INFO | faster_whisper | Processing audio with duration 00:05.000
 2026-06-12 16:10:17,046 | INFO | comtypes.client._code_cache | Imported existing <module 'comtypes.gen' from 'C:\\Users\\chakr\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
 2026-06-12 16:10:17,063 | INFO | comtypes.client._code_cache | Using writeable comtypes cache directory: 'C:\Users\chakr\AppData\Local\Programs\Python\Python312\Lib\site-packages\comtypes\gen'
+2026-06-12 16:26:06,349 | INFO | AIAssistantRobot | Initializing RobotBrain...
+2026-06-12 16:26:06,351 | INFO | AIAssistantRobot | RobotBrain initialized successfully.
+2026-06-12 16:26:06,351 | INFO | AIAssistantRobot | Robot startup sequence initiated.
+2026-06-12 16:26:06,352 | INFO | AIAssistantRobot | Robot is ready.
+2026-06-12 16:29:32,375 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 16:29:32,569 | INFO | sqlalchemy.engine.Engine | INSERT INTO documents (user_id, filename, file_type, file_size, word_count, chunk_count, collection_name, doc_id, status) VALUES (%(user_id)s, %(filename)s, %(file_type)s, %(file_size)s, %(word_count)s, %(chunk_count)s, %(collection_name)s, %(doc_id)s, %(status)s) RETURNING documents.id, documents.created_at
+2026-06-12 16:29:32,572 | INFO | sqlalchemy.engine.Engine | [generated in 0.00805s] {'user_id': None, 'filename': 'TCS nqt-50 coding question .pdf', 'file_type': 'pdf', 'file_size': 133131, 'word_count': 2307, 'chunk_count': 24, 'collection_name': 'knowledge_base', 'doc_id': 'b44db999-7b28-4494-8bec-512aeda93d84', 'status': 'success'}
+2026-06-12 16:29:32,651 | INFO | sqlalchemy.engine.Engine | COMMIT
+2026-06-12 16:29:32,660 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 16:29:32,739 | INFO | sqlalchemy.engine.Engine | SELECT documents.id, documents.user_id, documents.filename, documents.file_type, documents.file_size, documents.word_count, documents.chunk_count, documents.collection_name, documents.doc_id, documents.status, documents.created_at 
+FROM documents 
+WHERE documents.id = %(pk_1)s
+2026-06-12 16:29:32,739 | INFO | sqlalchemy.engine.Engine | [generated in 0.00144s] {'pk_1': 1}
+2026-06-12 16:29:32,801 | INFO | sqlalchemy.engine.Engine | ROLLBACK
+2026-06-12 16:29:46,709 | INFO | sqlalchemy.engine.Engine | BEGIN (implicit)
+2026-06-12 16:29:46,715 | INFO | sqlalchemy.engine.Engine | SELECT documents.id AS documents_id, documents.user_id AS documents_user_id, documents.filename AS documents_filename, documents.file_type AS documents_file_type, documents.file_size AS documents_file_size, documents.word_count AS documents_word_count, documents.chunk_count AS documents_chunk_count, documents.collection_name AS documents_collection_name, documents.doc_id AS documents_doc_id, documents.status AS documents_status, documents.created_at AS documents_created_at 
+FROM documents ORDER BY documents.created_at DESC
+2026-06-12 16:29:46,716 | INFO | sqlalchemy.engine.Engine | [generated in 0.00084s] {}
+2026-06-12 16:29:46,729 | INFO | sqlalchemy.engine.Engine | ROLLBACK
